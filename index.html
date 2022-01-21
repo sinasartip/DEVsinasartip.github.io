@@ -1,0 +1,304 @@
+Skip to content
+DEV Community
+Search...
+
+Log in
+Create account
+
+15
+
+3
+
+15
+
+Programming Liftoff
+Programming Liftoff
+Posted on Feb 28, 2018 • Updated on May 8, 2020
+
+Create a Basic Webpage with CSS and JavaScript
+#
+javascript
+#
+webdev
+#
+beginners
+#
+github
+This article was originally published on programmingliftoff.com as Create a Basic Webpage with CSS and JavaScript.
+
+Screenshot of finished webpage
+
+Note: If you already have your website and just need to upload it to GitHub and enable GitHub Pages, read Upload a Website to GitHub Pages
+
+Prefer to watch this tutorial instead of reading it? Click here to watch it on YouTube.
+
+Tired of creating boring HTML pages without style? Then it's time to add some CSS and JavaScript to liven up your webpage! In this tutorial we will create a website with a basic index.html file and add some CSS and JavaScript files to make it more exciting. Then we will upload the webpage to GitHub as a GitHub Pages website! Note that the methods shown in this tutorial to add CSS and JavaScript files in a webpage are not specific to GitHub Pages. These methods will work with any website and any host (GitHub, GitLab, BitBucket, etc...). Without further ado, let's get started!
+
+Start by opening your favorite text editor and creating a new folder (you can name the folder anything you like). In that folder, create a file named index.html.
+
+Add the following code to index.html:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My webpage!</title>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <h4 id='date'></h4>
+  </body>
+</html>
+If you open the webpage in the browser, you should see just "Hello, World!" printed on the screen.
+
+Adding JavaScript to Our Webpage
+Next we will learn how to import JavaScript code from a separate file into 'index.html'. Create a folder named 'javascript'. Inside that folder, create a file named 'index.js'. Inside this JavaScript file, add the following line:
+document.getElementById('date').innerHTML = new Date().toDateString();
+Then in the <head> tag in 'index.html', add the following line of code:
+<script async src="./javascript/index.js"></script>
+Now save the files and refresh your browser. You should see the current date printed bellow 'Hello, World!'. So how is this working? Take another look at the JavaScript we added. As you can see, it gets the element with id 'date' (thats the <h4> tag in our webpage), and sets the text inside it to a new Date() object that is converted into a more readable string.
+
+Then we added a <script> tag in the 'index.html' page to load this JavaScript code in our webpage. We set the src attribute of the <script> tag to "./javascript/index.js". This tells the browser to load the file 'index.js', which is located in the 'javascript' folder. This happens asynchronously and then the JavaScript code is executed, updating our web page almost instantly! Great, now that we've added some JavaScript, lets add some CSS.
+
+Adding CSS to Our Webpage
+First create a folder named 'styles'. Inside this folder, create a file named 'styles.css'. Type or paste the following code into 'styles.css':
+body {
+  text-align: center;
+  background-color: #f0e8c5;
+}
+Now go back to the 'index.html' file and add the following <link> tag inside the <head> tag (right above the <script> tag we added in the last section):
+<link rel="stylesheet" href="styles/styles.css" />
+Now refresh the 'index.html' page in your browser. Sweet! We've successfully added styles to the webpage! Looking at the code we added to 'styles.css', you can see that we centered the text and added a light-tan background color to the body of the webpage. Then we added a <link> tag with the attribute rel="stylesheet" to 'index.html'. This tells the browser that we will be loading CSS styles from a separate file. We also added the attribute href="styles/styles.css". This tells the browser that the styles we want to add are located in the 'styles.css' file, which is in the 'styles' folder. Awesome! Now that we've added JavaScript and CSS to our webpage, let's overdo it and add some image with some sweet styles!
+
+Add some sweet CSS styles!
+Replace the contents of your 'index.html' page with the following code:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My webpage!</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script async src="./javascript/index.js"></script>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <h4 id='date'></h4>
+
+    <div class="image-section">
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+    </div>
+  </body>
+</html>
+Also replace the contents of 'styles.css' with the following code:
+body {
+  text-align: center;
+  background-color: #f0e8c5;
+}
+
+div {
+  margin-top: 15px;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+}
+
+.section-style {
+  margin-right: 25px;
+  margin-left: 25px;
+  background-color: white;
+}
+Now refresh your webpage. Nice! We have a sweet webpage with images from unsplash.com! Every time you refresh the page you will see a new random image. Pretty cool, right?!
+
+Image of basic webpage with four pictures from unsplash
+
+If you had any trouble, watch the video tutorial on YouTube.
+
+Next Steps: Uploading the Website to GitHub Pages
+Ok, now that we've had our fun creating our site locally, let's publish it to the internet for free using GitHub Pages. Head on over to Upload a Website to GitHub Pages to learn how to upload your site to GitHub Pages.
+
+Thanks for reading!
+-Andrew @ Programming Liftoff
+Website: programmingliftoff.com
+
+Discussion (6)
+Subscribe
+pic
+Add to the discussion
+ 
+jrd656 profile image
+jrd656
+•
+Nov 6 '19
+
+This is brilliant. Thank you.
+
+There's one small bug in the guide that caused me a bit of confusion:
+
+"Then in the tag in 'index.html', add the following line of code:"
+
+The tag isn't showing up. (I guess you can find it clearly shown on the youtube video for anyone else who got stuck here).
+
+
+2
+ likes
+Reply
+ 
+miller_alaine profile image
+Alaine Miller
+•
+Mar 2 '18
+
+This was great. Thank you!
+
+
+2
+ likes
+Reply
+ 
+itcoach profile image
+ITCoach
+•
+Sep 17 '18
+
+I followed every step and the date doesnt appear on my page. I tried to open in Chrome and Explorer. Any idea what did I do wrong:)?
+
+
+1
+ like
+Reply
+ 
+santosh254 profile image
+Santosh254
+•
+Mar 4 '19 • Edited on Mar 4
+
+HI, Yes he is wrong . Please follow this and try.
+<!DOCTYPE html>
+
+
+Life Events
+
+
+
+
+Sample Page Website
+
+Click Me function myfuc() { document.getElementById('date').innerHTML = new Date().toDateString(); }
+
+1
+ like
+Reply
+ 
+brian2be profile image
+brian2be
+•
+Nov 3 '18
+
+Check console in Web Inspector, check for errors. Maybe there's a problem with the path to the resource?
+
+
+1
+ like
+Reply
+ 
+monsij profile image
+Monsij Biswal
+•
+Mar 18 '19
+
+Make sure the javascript file is placed under /javascript/
+
+
+1
+ like
+Reply
+Code of Conduct • Report abuse
+Read next
+pradumnasaraf profile image
+How to find an Open Source project to contribute to on GitHub?
+Pradumna Saraf - Jan 19
+
+hasaragk profile image
+NFT Gaming Platform Development Company & Services - Developcoins
+hasaraGK - Jan 6
+
+moose_said profile image
+Installing Tailwind CSS in your Laravel Project
+Mostafa Said - Jan 19
+
+ashikarose profile image
+How to learn React.js in 2022: A Complete Guide for Beginners
+ashikarose - Jan 19
+
+
+Programming Liftoff
+Follow
+JOINED
+Sep 9, 2017
+More from Programming Liftoff
+Win a $50 Gift Card to the DEV Shop!
+#giveaway #developer #beginners #webdev
+What is the best type of computer for a computer science student entering college/university?
+#discuss #webdev #computerscience #programming
+JSON Simplified
+#json #programming #webdev #beginners
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My webpage!</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script async src="./javascript/index.js"></script>
+  </head>
+  <body>
+    <h1>Hello, World!</h1>
+    <h4 id='date'></h4>
+
+    <div class="image-section">
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+    </div>
+
+    <div class="image-section">
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+
+      <div class="section-style">
+        <img src="https://source.unsplash.com/random/400x200" alt="" />
+        <p>A random image courtesy of unsplash.com.</p>
+      </div>
+    </div>
+  </body>
+</html>
+DEV Community — A constructive and inclusive social network for software developers. With you every step of your journey.
+
+Built on Forem — the open source software that powers DEV and other inclusive communities.
+
+Made with love and Ruby on Rails. DEV Community © 2016 - 2022.
