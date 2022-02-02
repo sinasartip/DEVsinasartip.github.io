@@ -1,19 +1,67 @@
-body {
-    text-align: center;
-    background-color: rgb(173, 173, 173);
-  }
+  /* GLOBAL STYLES */
+
+* {
+  box-sizing: border-box;
+}
+
+  body {
+  background-color: #E5E5E5;
+  margin: 0px 50px 50px;
+}
   
-  div {
-    margin-top: 15px;
-  }
-  
-  .image-section {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .section-style {
-    margin-right: 25px;
-    margin-left: 25px;
-    background-color: rgb(173, 173, 173);
-  }
+/* Each item in the grid contains numbers */
+.item {
+  /* Center the contents of the grid items. Making each grid item a Flex Container */
+  display: flex;
+    
+  /* Horizontal and Vertical centering */
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #87b5ff;
+  border-radius: 3px;
+  font-size: 2em;
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #1c57b5;
+}
+
+/*CSS Grid styles */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 5fr 3fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+      "top top top"
+      "left center right"
+      "bottom bottom bottom";
+}
+
+.header {
+  grid-area: top;
+}
+.content {
+   grid-area: center;
+} 
+
+.leftblade {
+   grid-area: left;
+}
+.footer {
+   grid-area: bottom;
+}
+
+.rightblade {
+  grid-area: right;
+}
+
+/* Nav Blade Style */
+.navblade {
+  fill: black;
+  width: 100%;
+  height: 100%;
+}
+
+#nav_blade_background {
+  width: 20%;
+  height: 100%;
+}

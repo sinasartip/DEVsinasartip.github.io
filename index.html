@@ -1,19 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My webpage!</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <script async src="./javascript/index.js"></script>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embed Url</title>
+  <link rel="stylesheet" href="styles/styles.css">
+
+  <head>  
+    <div class="item header">Header</div>
   </head>
+
   <body>
-    <h1>Hello, World!</h1>
-    <h4 id='date'></h4>
-    <iframe 
-      title="RosetoEffect - Death Summary All Ages" 
-      width="1280" height="720" 
-      src="https://app.powerbi.com/reportEmbed?reportId=fce6478d-3cf7-4ccf-b447-7bf43f4dfdce&autoAuth=true&ctid=42d9d346-43a1-4a36-8362-cc75616d6588&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLWNhbmFkYS1jZW50cmFsLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D&pageName=ReportSection&filterPaneEnabled=false&navContentPaneEnabled=false"
-      frameborder="0" 
-      allowFullScreen="true">
-    </iframe>
+    <main>     
+      <div class="container">
+        <div class="item content">Content</div>
+
+        <div class="item leftblade">
+          <svg class="navblade">
+            <rect id="nav_blade_background"/>
+          </svg>
+
+        </div>
+
+        <div class="item rightblade">Rigth-Blade</div>
+      </div>
+    </main>
   </body>
+
+  <footer>
+    <div class="item footer">Footer</div>
+  </footer>
 </html>
