@@ -6,7 +6,7 @@
 
   body {
   background-color: #E5E5E5;
-  margin: 0px 50px 50px;
+  margin: 0px 0px 0px;
 }
   
 /* Each item in the grid contains numbers */
@@ -29,16 +29,23 @@
 .container {
   display: grid;
   grid-template-columns: 3fr 5fr 3fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-      "top top top"
-      "left center right"
-      "bottom bottom bottom";
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: 
+    "top top top"
+    "left center right"
+    "bottom bottom bottom";
+  width: 100vw;
+  height: 100vh;
 }
 
 .header {
   grid-area: top;
-}
+} 
+
+.footer {
+  grid-area: bottom;
+} 
+
 .content {
    grid-area: center;
 } 
@@ -46,22 +53,18 @@
 .leftblade {
    grid-area: left;
 }
-.footer {
-   grid-area: bottom;
-}
 
 .rightblade {
   grid-area: right;
 }
 
-/* Nav Blade Style */
-.navblade {
+#nav_blade_background {
   fill: black;
   width: 100%;
   height: 100%;
 }
 
-#nav_blade_background {
-  width: 20%;
+#nav_blade_background_container {
+  width: 100%;
   height: 100%;
 }
