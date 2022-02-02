@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: #f0e8c5;
+    background-color: rgb(173, 173, 173);
   }
   
   div {
@@ -15,5 +15,5 @@ body {
   .section-style {
     margin-right: 25px;
     margin-left: 25px;
-    background-color: white;
+    background-color: rgb(173, 173, 173);
   }
